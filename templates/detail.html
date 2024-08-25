@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+
+    <h3> {{todo_id.title}}</h3>
+    <br>
+    <small>{{todo_id.created}}</small><hr>
+    <h3> Body:</h3>
+    <p>{{todo_id.body}}</p>
+
+    <hr>
+    <a href=" {% url "deletes" todo_id.id %} " class="btn btn-danger" >Delete</a>
+    <a href=" {% url "updates" todo_id.id %} " class="btn btn-primary" >Update</a>
+
+{% endblock content %}
+
+
+
